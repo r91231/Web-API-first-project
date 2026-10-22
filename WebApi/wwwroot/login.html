@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="LogIn.js" defer></script>
+    <style></style>
+</head>
+<body>
+    <div>✅</div>
+    <p id="welcome"></p>
+    <button onclick="DisplayDitails()">to update details</button>
+    <div class="updateDetails" style="display:none">
+        <label for="update_email">מייל</label>
+        <input id="update_email" type="email" />
+        <br><br>
+        <label for="update_password">סיסמה</label>
+        <input id="update_password" type="text" />
+        <br><br>
+        <label for="update_firstName">שם פרטי</label>
+        <input id="update_firstName" type="text" />
+        <br><br>
+        <label for="update_lastName">שם משפחה</label>
+        <input id="update_lastName" type="text" />
+        <br><br>
+        <button onclick="UpdateDetails()">עדכן</button>
+    </div>
+    
+</body>
+</html>
