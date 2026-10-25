@@ -9,6 +9,8 @@ namespace WebApi.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
+        //This is a fixed path
+        readonly string path = "DataUsers.txt";
         // GET: api/<UsersController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -27,7 +29,6 @@ namespace WebApi.Controllers
         [HttpPost]
         public ActionResult<User> Post([FromBody] User user)
         {
-            string path = "DataUsers.txt";
             int numberOfUsers = System.IO.File.ReadLines(path).Count();
             user.Id = numberOfUsers + 1;
             string userJson = JsonSerializer.Serialize(user);
@@ -38,7 +39,6 @@ namespace WebApi.Controllers
         [HttpPost("LogIn")]
         public ActionResult<User> Post([FromBody] LogInUser logInUser)
         {
-            string path = "DataUsers.txt";
             using (StreamReader reader = System.IO.File.OpenText(path))
             {
                 string? currentUserInFile;
@@ -56,7 +56,6 @@ namespace WebApi.Controllers
         [HttpPut("{id}")]
         public ActionResult Put(int id, [FromBody] User updateUserDetails)
         {
-            string path = "DataUsers.txt";
             string textToReplace = string.Empty;
             using (StreamReader reader =
             System.IO.File.OpenText(path))
