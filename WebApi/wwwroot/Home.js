@@ -23,6 +23,28 @@
         alert(e)
     }
 }
+const StrongPassword = async () => {
+    try {
+        const password = document.querySelector("#password").value
+        const response = await fetch('api/StrongPassword', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json' },
+            body: JSON.stringify(password)
+        })
+        if (response.ok) {
+            const strongPass = document.querySelector("#strongPass")
+            const res = await response.json()
+            strongPass.value = res.score
+        }
+        else
+            throw ("error")
+    }
+    catch (e) {
+        alert(e)
+    }
+    
+}
 const LogIn = async () => {
     try {
         const enter = {
