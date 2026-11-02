@@ -43,7 +43,6 @@ const StrongPassword = async () => {
     catch (e) {
         alert(e)
     }
-    
 }
 const LogIn = async () => {
     try {

@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApi
+namespace Entities
+
 {
     public class LogInUser
     {

@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
+using Services;
+using Entities;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WebApi.Controllers
@@ -8,6 +10,7 @@ namespace WebApi.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
+        UsersService usersService = new UsersService();
         // GET: api/<UsersController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -26,56 +29,24 @@ namespace WebApi.Controllers
         [HttpPost]
         public ActionResult<User> Post([FromBody] User user)
         {
-            string path = "DataUsers.txt";
-            int numberOfUsers = System.IO.File.ReadLines(path).Count();
-            user.Id = numberOfUsers + 1;
-            string userJson = JsonSerializer.Serialize(user);
-            System.IO.File.AppendAllText(path, userJson + Environment.NewLine);
-            return CreatedAtAction(nameof(Get), new { id = user.Id });
+            user = usersService.AddUser(user);
+            return CreatedAtAction(nameof(Get), new { id = user.Id },user);
         }
 
         [HttpPost("LogIn")]
         public ActionResult<User> Post([FromBody] LogInUser logInUser)
         {
-            string path = "DataUsers.txt";
-            using (StreamReader reader = System.IO.File.OpenText(path))
-            {
-                string? currentUserInFile;
-                while ((currentUserInFile = reader.ReadLine()) != null)
-                {
-                    User user = JsonSerializer.Deserialize<User>(currentUserInFile);
-                    if (user.Email == logInUser.Email && user.Password == logInUser.Password)
-                        return Ok(user);
-                }
-            }
-            return NotFound();
+            var user = usersService.GetUser(logInUser);
+            if(user == null)
+                return NotFound();
+            return Ok(user);
         }
 
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
         public ActionResult Put(int id, [FromBody] User updateUserDetails)
         {
-            string path = "DataUsers.txt";
-            string textToReplace = string.Empty;
-            using (StreamReader reader =
-            System.IO.File.OpenText(path))
-            {
-                string currentUserInFile;
-                while ((currentUserInFile = reader.ReadLine()) != null)
-                {
-                    User user = JsonSerializer.Deserialize<User>(currentUserInFile);
-                    if (user.Id == id)
-                        textToReplace = currentUserInFile;
-                }
-            }
-
-            if (textToReplace != string.Empty)
-            {
-                string text = System.IO.File.ReadAllText(path);
-                text = text.Replace(textToReplace,
-                JsonSerializer.Serialize(updateUserDetails));
-                System.IO.File.WriteAllText(path, text);
-            }
+            usersService.UpdateUser(id, updateUserDetails);
             return Ok();
         }
 

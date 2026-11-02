@@ -7,11 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="DataUsers.txt" />
+    <PackageReference Include="zxcvbn-core" Version="7.0.92" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="zxcvbn-core" Version="7.0.92" />
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\Service\Services.csproj" />
   </ItemGroup>
 
 </Project>

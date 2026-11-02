@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Services;
 using Zxcvbn;
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WebApi.Controllers
 {
@@ -8,6 +8,7 @@ namespace WebApi.Controllers
     [ApiController]
     public class StrongPasswordController : ControllerBase
     {
+        StrongPasswordService strongPasswordService = new StrongPasswordService();
         // GET: api/<StrongPasswordController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -25,9 +26,8 @@ namespace WebApi.Controllers
         // POST api/<StrongPasswordController>
         [HttpPost]
         public ActionResult<Result> Post([FromBody] string password)
-        {
-            var res = Zxcvbn.Core.EvaluatePassword(password);
-            return Ok(res);
+        { 
+            return Ok(strongPasswordService.GetStrongPassword(password));
         }
 
         // PUT api/<StrongPasswordController>/5
