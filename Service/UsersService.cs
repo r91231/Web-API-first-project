@@ -4,20 +4,24 @@ using System.Text.Json;
 
 namespace Services
 {
-    public class UsersService
+    public class UsersService:IUserService
     {
-        UserRepository userRepository = new UserRepository();
+        private readonly IUserRepository _userRepository;
+        public UsersService(IUserRepository userRepository)
+        {
+            _userRepository = userRepository;
+        }
         public User AddUser(User user)
         {
-            return userRepository.AddUser(user);
+            return _userRepository.AddUser(user);
         }
         public User GetUser(LogInUser logInUser)
         {
-            return userRepository.GetUser(logInUser);
+            return _userRepository.GetUser(logInUser);
         }
         public void UpdateUser(int id, User updateUserDetails)
         {
-            userRepository.UpdateUser(id, updateUserDetails);
+            _userRepository.UpdateUser(id, updateUserDetails);
         }
 
     }

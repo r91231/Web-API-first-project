@@ -10,7 +10,12 @@ namespace WebApi.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        UsersService usersService = new UsersService();
+        private readonly IUserService _usersService;
+        public UsersController(IUserService usersService)
+        {
+            _usersService = usersService;
+        }
+
         // GET: api/<UsersController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -29,14 +34,14 @@ namespace WebApi.Controllers
         [HttpPost]
         public ActionResult<User> Post([FromBody] User user)
         {
-            user = usersService.AddUser(user);
+            user = _usersService.AddUser(user);
             return CreatedAtAction(nameof(Get), new { id = user.Id },user);
         }
 
         [HttpPost("LogIn")]
         public ActionResult<User> Post([FromBody] LogInUser logInUser)
         {
-            var user = usersService.GetUser(logInUser);
+            var user = _usersService.GetUser(logInUser);
             if(user == null)
                 return NotFound();
             return Ok(user);
@@ -46,7 +51,7 @@ namespace WebApi.Controllers
         [HttpPut("{id}")]
         public ActionResult Put(int id, [FromBody] User updateUserDetails)
         {
-            usersService.UpdateUser(id, updateUserDetails);
+            _usersService.UpdateUser(id, updateUserDetails);
             return Ok();
         }
 
