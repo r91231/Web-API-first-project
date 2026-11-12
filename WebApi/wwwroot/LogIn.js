@@ -13,6 +13,28 @@ const DisplayDitails = async () => {
     const ditails = document.querySelector(".updateDetails")
     ditails.style.display = "block"
 }
+const StrongPassword = async () => {
+    try {
+        const password = document.querySelector("#password").value
+        const response = await fetch('api/StrongPassword', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(password)
+        })
+        if (response.ok) {
+            const strongPass = document.querySelector("#strongPass")
+            const res = await response.json()
+            strongPass.value = res.score
+        }
+        else
+            throw ("error")
+    }
+    catch (e) {
+        alert(e)
+    }
+}
 
 const UpdateDetails = async () => {
     const updateUserDetails = {
@@ -23,6 +45,10 @@ const UpdateDetails = async () => {
         lastName: update_lastName.value,
     }
     try {
+        const strongPass = await StrongPassword()
+        if (strongPass < 3)
+            throw ("הסיסמה לא חזקה!")
+
         const response = await fetch(`api/Users/${updateUserDetails.id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
@@ -31,6 +57,9 @@ const UpdateDetails = async () => {
         if (response.ok) {
             sessionStorage.setItem('CurrentUser', JSON.stringify(updateUserDetails))
             alert("the details successfuly updated")
+        }
+        else if (response.status == 400) {
+            throw ("הסיסמה לא חזקה")
         }
         else {
             throw ("error on the update")

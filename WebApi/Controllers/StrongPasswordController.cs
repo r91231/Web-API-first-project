@@ -30,7 +30,7 @@ namespace WebApi.Controllers
         // POST api/<StrongPasswordController>
         [HttpPost]
         public ActionResult<Result> Post([FromBody] string password)
-        { 
+        {    
             return Ok(_strongPasswordService.GetStrongPassword(password));
         }
 

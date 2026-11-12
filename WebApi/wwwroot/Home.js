@@ -1,4 +1,28 @@
-﻿const SignIn = async () => {
+﻿const StrongPassword = async () => {
+    try {
+        const password = document.querySelector("#password").value
+        const response = await fetch('api/StrongPassword', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(password)
+        })
+        if (response.ok) {
+            const strongPass = document.querySelector("#strongPass")
+            const res = await response.json()
+            strongPass.value = res.score
+            return res.score
+        }            
+        else
+            throw ("error")
+    }
+    catch (e) {
+        alert(e)
+    }
+}
+
+const SignIn = async () => {
     try {
         const user = {
             id: 0,
@@ -7,6 +31,9 @@
             firstName: document.querySelector("#firstName").value,
             lastName: document.querySelector("#lastName").value,
         }
+        const strongPass = await StrongPassword()
+        if (strongPass < 3)
+            throw ("הסיסמה לא חזקה!")
         const response = await fetch('api/Users', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -16,6 +43,9 @@
             const dataRenspose = await response.json()
             alert(`שלום ${dataRenspose.firstName} , נרשמת בהצלחה, הינך משתמש מס' ${dataRenspose.id}`)
         }
+        else if (response.status == 400) {
+            throw ("הסיסמה לא מספיק חזקה")
+        }
         else
             throw("ההרשמה לא הצליחה, נסה שוב")
     }
@@ -23,27 +53,7 @@
         alert(e)
     }
 }
-const StrongPassword = async () => {
-    try {
-        const password = document.querySelector("#password").value
-        const response = await fetch('api/StrongPassword', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json' },
-            body: JSON.stringify(password)
-        })
-        if (response.ok) {
-            const strongPass = document.querySelector("#strongPass")
-            const res = await response.json()
-            strongPass.value = res.score
-        }
-        else
-            throw ("error")
-    }
-    catch (e) {
-        alert(e)
-    }
-}
+
 const LogIn = async () => {
     try {
         const enter = {
