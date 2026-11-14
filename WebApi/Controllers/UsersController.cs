@@ -34,11 +34,11 @@ namespace WebApi.Controllers
 
         // POST api/<UsersController>
         [HttpPost]
-        public ActionResult<User> Post([FromBody] User user)
+        public async Task<ActionResult<User>> Post([FromBody] User user)
         {
             if (_passwordService.GetStrongPassword(user.Password).Score > 2)
             {
-                user = _usersService.AddUser(user);
+                user = await _usersService.AddUser(user);
                 return CreatedAtAction(nameof(Get), new { id = user.Id }, user);
             }
             else
@@ -59,11 +59,11 @@ namespace WebApi.Controllers
 
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] User updateUserDetails)
+        public async Task<ActionResult> Put(int id, [FromBody] User updateUserDetails)
         {
             if (_passwordService.GetStrongPassword(updateUserDetails.Password).Score >2)
             {
-                _usersService.UpdateUser(id, updateUserDetails);
+                await _usersService.UpdateUser(id, updateUserDetails);
                 return Ok();
             }
             else

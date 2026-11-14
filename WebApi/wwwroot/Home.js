@@ -34,6 +34,7 @@ const SignIn = async () => {
         const strongPass = await StrongPassword()
         if (strongPass < 3)
             throw ("הסיסמה לא חזקה!")
+
         const response = await fetch('api/Users', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

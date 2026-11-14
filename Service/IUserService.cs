@@ -7,9 +7,9 @@ namespace Services
 {
     public interface IUserService
     {
-        User AddUser(User user);
+        Task<User> AddUser(User user);
         User GetUser(LogInUser logInUser);
-        void UpdateUser(int id, User updateUserDetails);
+        Task UpdateUser(int id, User updateUserDetails);
 
     }
 }
