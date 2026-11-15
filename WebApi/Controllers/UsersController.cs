@@ -25,6 +25,7 @@ namespace WebApi.Controllers
             return new string[] { "Ruti", "Tamar", "Dasi" };
         }
 
+        //Question: Why does GET by id always return 'value'? The assignment asks it to return the user with this id, or NotFound / NoContent when there is none
         // GET api/<UsersController>/5
         [HttpGet("{id}")]
         public string Get(int id)
@@ -52,6 +53,7 @@ namespace WebApi.Controllers
         public ActionResult<User> Post([FromBody] LogInUser logInUser)
         {
             var user = _usersService.GetUser(logInUser);
+            //The assignment asks a login with a wrong password to return 204 NoContent: what does NotFound return here, and when is 204 used?
             if(user == null)
                 return NotFound();
             return Ok(user);

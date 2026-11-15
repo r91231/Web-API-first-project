@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IUserService, UsersService>();
 builder.Services.AddTransient<IStrongPasswordService, StrongPasswordService>();
+//Question: GetConnectionString looks up a setting name in appsettings.json, but here it gets the connection string itself: where should the connection string be kept?
 builder.Services.AddDbContext<StoreDBContext>
     (options => options.UseSqlServer(builder.Configuration.GetConnectionString
     ("Data Source=DESKTOP-JC2M436;Initial Catalog=StoreDB;Integrated Security=True;Trust Server Certificate=True")), ServiceLifetime.Transient);

@@ -15,6 +15,7 @@ const DisplayDitails = async () => {
 }
 const StrongPassword = async () => {
     try {
+        //Question: login.html has no element with id password and no strongPass: which input should this check read the password from?
         const password = document.querySelector("#password").value
         const response = await fetch('api/StrongPassword', {
             method: 'POST',
