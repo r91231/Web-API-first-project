@@ -27,6 +27,7 @@ namespace WebApi.Controllers
 
         // GET api/<UsersController>/5
         [HttpGet("{id}")]
+        //Why does GET by id return 'value'? It should return the user with this id, and NoContent if there is no such user. What would you write here?
         public string Get(int id)
         {
             return "value";
@@ -53,6 +54,7 @@ namespace WebApi.Controllers
         {
             var user = _usersService.GetUser(logInUser);
             if(user == null)
+                //The assignment asks a login with a wrong password to return 204 NoContent: what should this return instead of NotFound?
                 return NotFound();
             return Ok(user);
         }

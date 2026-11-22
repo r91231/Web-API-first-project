@@ -1,4 +1,5 @@
-﻿const StrongPassword = async () => {
+﻿//In JavaScript, function names are camelCase: strongPassword
+const StrongPassword = async () => {
     try {
         const password = document.querySelector("#password").value
         const response = await fetch('api/StrongPassword', {

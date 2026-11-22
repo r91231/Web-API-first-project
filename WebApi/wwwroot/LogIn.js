@@ -1,4 +1,5 @@
-﻿const CurrentUser = JSON.parse(sessionStorage.getItem('CurrentUser'))
+﻿//In JavaScript, variable names are camelCase: currentUser
+const CurrentUser = JSON.parse(sessionStorage.getItem('CurrentUser'))
 const p = document.querySelector("#welcome")
 p.textContent = `Hello ${CurrentUser.firstName},you have successfuly logged in`
 const update_email = document.querySelector("#update_email")
@@ -15,6 +16,7 @@ const DisplayDitails = async () => {
 }
 const StrongPassword = async () => {
     try {
+        //Which element is this? login.html has no element with id 'password': which password field should this check read?
         const password = document.querySelector("#password").value
         const response = await fetch('api/StrongPassword', {
             method: 'POST',
@@ -24,6 +26,7 @@ const StrongPassword = async () => {
             body: JSON.stringify(password)
         })
         if (response.ok) {
+            //Which element is this? login.html has no element with id 'strongPass': where should the score be shown on this page?
             const strongPass = document.querySelector("#strongPass")
             const res = await response.json()
             strongPass.value = res.score
