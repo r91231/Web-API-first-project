@@ -19,7 +19,13 @@ public partial class StoreDBContext : DbContext
     }
 
 
+    public virtual DbSet<Category> Categories { get; set; }
 
+    public virtual DbSet<Order> Orders { get; set; }
+
+    public virtual DbSet<OrderItem> OrderItems { get; set; }
+
+    public virtual DbSet<ProductsDb> ProductsDbs { get; set; }
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -45,6 +51,62 @@ public partial class StoreDBContext : DbContext
             entity.Property(e => e.Password)
                 .IsRequired()
                 .HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<Category>(entity =>
+        {
+            entity.Property(e => e.CategoryName)
+                .IsRequired()
+                .HasMaxLength(50)
+                .HasColumnName("Category_Name");
+        });
+
+        modelBuilder.Entity<Order>(entity =>
+        {
+            entity.Property(e => e.Date).HasColumnType("datetime");
+            entity.Property(e => e.TotalSum)
+                .HasColumnType("money")
+                .HasColumnName("Total_Sum");
+            entity.Property(e => e.UserId).HasColumnName("User_Id");
+        });
+
+        modelBuilder.Entity<OrderItem>(entity =>
+        {
+            entity.HasIndex(e => e.Id, "IX_OrderItems");
+
+            entity.Property(e => e.OrderId).HasColumnName("Order_Id");
+            entity.Property(e => e.ProductId).HasColumnName("Product_Id");
+
+            entity.HasOne(d => d.Order).WithMany(p => p.OrderItems)
+                .HasForeignKey(d => d.OrderId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_OrderItems_Orders");
+
+            entity.HasOne(d => d.Product).WithMany(p => p.OrderItems)
+                .HasForeignKey(d => d.ProductId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_OrderItems_ProductsDB");
+        });
+
+        modelBuilder.Entity<ProductsDb>(entity =>
+        {
+            entity.ToTable("ProductsDB");
+
+            entity.Property(e => e.CategoryId).HasColumnName("Category_Id");
+            entity.Property(e => e.Description).HasMaxLength(200);
+            entity.Property(e => e.ImageName)
+                .HasMaxLength(50)
+                .HasColumnName("Image_Name");
+            entity.Property(e => e.Price).HasColumnType("money");
+            entity.Property(e => e.ProductName)
+                .IsRequired()
+                .HasMaxLength(50)
+                .HasColumnName("Product_Name");
+
+            entity.HasOne(d => d.Category).WithMany(p => p.ProductsDbs)
+                .HasForeignKey(d => d.CategoryId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_ProductsDB_Categories");
         });
 
         OnModelCreatingPartial(modelBuilder);

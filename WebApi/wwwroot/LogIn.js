@@ -9,13 +9,14 @@ update_email.value = CurrentUser.email
 update_password.value = CurrentUser.password
 update_firstName.value = CurrentUser.firstName
 update_lastName.value = CurrentUser.lastName
-const DisplayDitails = async () => {
+
+const displayDitails = async () => {
     const ditails = document.querySelector(".updateDetails")
     ditails.style.display = "block"
 }
-const StrongPassword = async () => {
+
+const strongPassword = async (password) => {
     try {
-        const password = document.querySelector("#password").value
         const response = await fetch('api/StrongPassword', {
             method: 'POST',
             headers: {
@@ -24,9 +25,8 @@ const StrongPassword = async () => {
             body: JSON.stringify(password)
         })
         if (response.ok) {
-            const strongPass = document.querySelector("#strongPass")
             const res = await response.json()
-            strongPass.value = res.score
+            return res.score
         }
         else
             throw ("error")
@@ -36,7 +36,7 @@ const StrongPassword = async () => {
     }
 }
 
-const UpdateDetails = async () => {
+const updateDetails = async () => {
     const updateUserDetails = {
         id: CurrentUser.id,
         email: update_email.value,
@@ -45,7 +45,7 @@ const UpdateDetails = async () => {
         lastName: update_lastName.value,
     }
     try {
-        const strongPass = await StrongPassword()
+        const strongPass = await strongPassword(updateUserDetails.password)
         if (strongPass < 3)
             throw ("הסיסמה לא חזקה!")
 

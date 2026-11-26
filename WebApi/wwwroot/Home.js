@@ -1,4 +1,4 @@
-﻿const StrongPassword = async () => {
+﻿const strongPassword = async () => {
     try {
         const password = document.querySelector("#password").value
         const response = await fetch('api/StrongPassword', {
@@ -22,7 +22,7 @@
     }
 }
 
-const SignIn = async () => {
+const signIn = async () => {
     try {
         const user = {
             id: 0,
@@ -31,7 +31,7 @@ const SignIn = async () => {
             firstName: document.querySelector("#firstName").value,
             lastName: document.querySelector("#lastName").value,
         }
-        const strongPass = await StrongPassword()
+        const strongPass = await strongPassword()
         if (strongPass < 3)
             throw ("הסיסמה לא חזקה!")
 
@@ -40,7 +40,7 @@ const SignIn = async () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(user)
         })
-        if (response.ok) {
+        if (response.ok && response.status == 201) {
             const dataRenspose = await response.json()
             alert(`שלום ${dataRenspose.firstName} , נרשמת בהצלחה, הינך משתמש מס' ${dataRenspose.id}`)
         }
@@ -55,7 +55,7 @@ const SignIn = async () => {
     }
 }
 
-const LogIn = async () => {
+const logIn = async () => {
     try {
         const enter = {
             email: document.querySelector("#login_email").value,
@@ -66,7 +66,7 @@ const LogIn = async () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(enter)
         })
-        if (post.ok) {
+        if (post.ok && post.status==200) {
             const dataPost = await post.json()
             sessionStorage.setItem('CurrentUser', JSON.stringify(dataPost))
             window.location.href = "login.html"
@@ -75,8 +75,7 @@ const LogIn = async () => {
         else
             throw("המשתמש לא קיים, נסה שוב")
     }
-    catch (e)
-    {
+    catch (e){
         alert(e)
     }
 }

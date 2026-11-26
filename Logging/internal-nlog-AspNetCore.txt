@@ -1,0 +1,154 @@
+2026-11-26 17:01:53.5414 Info Loading assembly name: NLog.MailKit
+2026-11-26 17:01:53.5678 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.6.0. Product version: 6.1.6+1b1d0f5fc178a79715058443d75497eeb397984f. GlobalAssemblyCache: False
+2026-11-26 17:01:53.6005 Error Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included. Exception: NLog.NLogConfigurationException: Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included.
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2026-11-26 17:01:53.6260 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:01:53.6260 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:01:53.6442 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:01:53.6442 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:01:53.6629 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:01:53.6629 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-11-26 17:01:53.7049 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-11-26 17:01:53.7223 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-11-26 17:01:53.7588 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=43, AutoReload=true, FilePath=D:\יד\API\WebApi\WebApi\nlog.config
+2026-11-26 17:12:31.8908 Info Loading assembly name: NLog.MailKit
+2026-11-26 17:12:31.9216 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.6.0. Product version: 6.1.6+1b1d0f5fc178a79715058443d75497eeb397984f. GlobalAssemblyCache: False
+2026-11-26 17:12:31.9558 Error Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included. Exception: NLog.NLogConfigurationException: Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included.
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2026-11-26 17:12:31.9829 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:12:31.9923 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:12:32.0043 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:12:32.0043 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:12:32.0282 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:12:32.0400 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-11-26 17:12:32.0642 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-11-26 17:12:32.0927 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-11-26 17:12:32.1346 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=43, AutoReload=true, FilePath=D:\יד\API\WebApi\WebApi\nlog.config
+2026-11-26 17:13:01.6561 Info Loading assembly name: NLog.MailKit
+2026-11-26 17:13:01.6796 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.6.0. Product version: 6.1.6+1b1d0f5fc178a79715058443d75497eeb397984f. GlobalAssemblyCache: False
+2026-11-26 17:13:01.7159 Error Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included. Exception: NLog.NLogConfigurationException: Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included.
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2026-11-26 17:13:01.7423 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:13:01.7521 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:13:01.7521 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:13:01.7738 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:13:01.7848 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:13:01.7848 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-11-26 17:13:01.8137 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-11-26 17:13:01.8377 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-11-26 17:13:01.8759 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=43, AutoReload=true, FilePath=D:\יד\API\WebApi\WebApi\nlog.config
+2026-11-26 17:14:30.0525 Info Loading assembly name: NLog.MailKit
+2026-11-26 17:14:30.0873 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.6.0. Product version: 6.1.6+1b1d0f5fc178a79715058443d75497eeb397984f. GlobalAssemblyCache: False
+2026-11-26 17:14:30.1312 Error Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included. Exception: NLog.NLogConfigurationException: Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included.
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2026-11-26 17:14:30.1674 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:14:30.1793 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:14:30.1949 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:14:30.2081 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:14:30.2239 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:14:30.2385 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-11-26 17:14:30.2554 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-11-26 17:14:30.2801 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-11-26 17:14:30.3182 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=43, AutoReload=true, FilePath=D:\יד\API\WebApi\WebApi\nlog.config
+2026-11-26 17:15:57.4870 Info Loading assembly name: NLog.MailKit
+2026-11-26 17:15:57.5089 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.6.0. Product version: 6.1.6+1b1d0f5fc178a79715058443d75497eeb397984f. GlobalAssemblyCache: False
+2026-11-26 17:15:57.5419 Error Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included. Exception: NLog.NLogConfigurationException: Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included.
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2026-11-26 17:15:57.5692 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:15:57.5812 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:15:57.5812 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:15:57.6029 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:15:57.6153 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:15:57.6276 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-11-26 17:15:57.6446 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-11-26 17:15:57.6658 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-11-26 17:15:57.7046 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=43, AutoReload=true, FilePath=D:\יד\API\WebApi\WebApi\nlog.config
+2026-11-26 17:17:44.7656 Info Loading assembly name: NLog.MailKit
+2026-11-26 17:17:44.7920 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.6.0. Product version: 6.1.6+1b1d0f5fc178a79715058443d75497eeb397984f. GlobalAssemblyCache: False
+2026-11-26 17:17:44.8239 Error Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included. Exception: NLog.NLogConfigurationException: Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included.
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2026-11-26 17:17:44.8521 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:17:44.8621 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:17:44.8932 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:17:44.9083 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:17:44.9234 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:17:44.9382 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-11-26 17:17:44.9708 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-11-26 17:17:44.9877 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-11-26 17:17:45.0239 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=43, AutoReload=true, FilePath=D:\יד\API\WebApi\WebApi\nlog.config
+2026-11-26 17:19:34.8336 Info Loading assembly name: NLog.MailKit
+2026-11-26 17:19:34.8569 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.6.0. Product version: 6.1.6+1b1d0f5fc178a79715058443d75497eeb397984f. GlobalAssemblyCache: False
+2026-11-26 17:19:34.8971 Error Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included. Exception: NLog.NLogConfigurationException: Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included.
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2026-11-26 17:19:34.9314 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:19:34.9428 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:19:34.9545 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:19:34.9545 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:19:34.9762 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:19:34.9902 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-11-26 17:19:35.0197 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-11-26 17:19:35.0352 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-11-26 17:19:35.0792 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=43, AutoReload=true, FilePath=D:\יד\API\WebApi\WebApi\nlog.config
+2026-11-26 17:31:10.2719 Info Loading assembly name: NLog.MailKit
+2026-11-26 17:31:10.3957 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.6.0. Product version: 6.1.6+1b1d0f5fc178a79715058443d75497eeb397984f. GlobalAssemblyCache: False
+2026-11-26 17:31:10.4313 Error Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included. Exception: NLog.NLogConfigurationException: Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included.
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2026-11-26 17:31:10.4655 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:31:10.4787 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:31:10.4890 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:31:10.4890 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:31:10.5107 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:31:10.5227 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-11-26 17:31:11.0894 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-11-26 17:31:11.1187 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-11-26 17:31:11.1911 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=43, AutoReload=true, FilePath=D:\יד\API\WebApi\WebApi\nlog.config
+2026-11-26 17:35:45.7957 Info Loading assembly name: NLog.MailKit
+2026-11-26 17:35:45.8421 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.6.0. Product version: 6.1.6+1b1d0f5fc178a79715058443d75497eeb397984f. GlobalAssemblyCache: False
+2026-11-26 17:35:45.9097 Error Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included. Exception: NLog.NLogConfigurationException: Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included.
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2026-11-26 17:35:45.9975 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:35:46.0275 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:35:46.0638 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:35:46.0856 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:35:46.1007 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:35:46.1193 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-11-26 17:35:46.1795 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-11-26 17:35:46.2160 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-11-26 17:35:46.3624 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=43, AutoReload=true, FilePath=D:\יד\API\WebApi\WebApi\nlog.config
+2026-11-26 17:38:23.9542 Info Loading assembly name: NLog.MailKit
+2026-11-26 17:38:23.9947 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.6.0. Product version: 6.1.6+1b1d0f5fc178a79715058443d75497eeb397984f. GlobalAssemblyCache: False
+2026-11-26 17:38:24.0464 Error Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included. Exception: NLog.NLogConfigurationException: Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included.
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2026-11-26 17:38:24.0844 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:38:24.0985 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:38:24.1152 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:38:24.1296 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:38:24.1465 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 17:38:24.1630 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-11-26 17:38:24.2432 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-11-26 17:38:24.2667 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-11-26 17:38:24.3520 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=43, AutoReload=true, FilePath=D:\יד\API\WebApi\WebApi\nlog.config
+2026-11-26 18:36:26.2567 Info Loading assembly name: NLog.MailKit
+2026-11-26 18:36:26.2829 Info NLog.MailKit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.6.0. Product version: 6.1.6+1b1d0f5fc178a79715058443d75497eeb397984f. GlobalAssemblyCache: False
+2026-11-26 18:36:26.3193 Error Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included. Exception: NLog.NLogConfigurationException: Failed to create Layout with unknown type-alias: 'TxtLayout' - Verify type-alias and check extension is included.
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2026-11-26 18:36:26.3455 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 18:36:26.3455 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 18:36:26.3675 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 18:36:26.3784 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 18:36:26.3784 Warn Error has been raised. Exception: NLog.NLogConfigurationException: 'SimpleLayout' cannot assign unknown property 'attribute' in section 'layout'
+2026-11-26 18:36:26.3987 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2026-11-26 18:36:26.4266 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2026-11-26 18:36:26.4403 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.2.2.5975. Product version: 6.2.2+d9ebf823ee8ba54977c336709928a96ea58c6259. GlobalAssemblyCache: False
+2026-11-26 18:36:26.4771 Info Configuration initialized: TargetNames=mylogfile, email, ConfigItems=43, AutoReload=true, FilePath=D:\יד\API\WebApi\WebApi\nlog.config

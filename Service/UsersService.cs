@@ -1,6 +1,5 @@
 ﻿using Entities;
 using Repositories;
-using System.Runtime.CompilerServices;
 using System.Text.Json;     
 
 namespace Services
@@ -16,9 +15,9 @@ namespace Services
         {
             return await _userRepository.AddUser(user);
         }
-        public User GetUser(LogInUser logInUser)
+        public async Task<User> GetUser(LogInUser logInUser)
         {
-            return _userRepository.GetUser(logInUser);
+            return await _userRepository.GetUser(logInUser);
         }
         public async Task UpdateUser(int id, User updateUserDetails)
         {

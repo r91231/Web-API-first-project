@@ -12,13 +12,17 @@ namespace WebApi.Controllers
     {
         private readonly IUserService _usersService;
         private IStrongPasswordService _passwordService;
-        public UsersController(IUserService usersService, IStrongPasswordService passwordService)
+        private IConfiguration _configuration;
+        private readonly ILogger<UsersController> _logger;
+        public UsersController(IUserService usersService, IStrongPasswordService passwordService,IConfiguration configuration,ILogger<UsersController> logger)
         {
             _usersService = usersService;
             _passwordService = passwordService;
+            _configuration = configuration;
+            _logger = logger;
         }
 
-        // GET: api/<UsersController>
+        //GET: api/<UsersController>
         [HttpGet]
         public IEnumerable<string> Get()
         {
@@ -36,9 +40,11 @@ namespace WebApi.Controllers
         [HttpPost]
         public async Task<ActionResult<User>> Post([FromBody] User user)
         {
-            if (_passwordService.GetStrongPassword(user.Password).Score > 2)
+            int score = int.Parse(_configuration["StrongPasswordScore:Developer"]);
+            if (_passwordService.GetStrongPassword(user.Password).Score > (score!=null?score:4))
             {
                 user = await _usersService.AddUser(user);
+                _logger.LogInformation($"--Added User number {user.Id}, with email {user.Email}, with name {user.FirstName} {user.LastName}--");
                 return CreatedAtAction(nameof(Get), new { id = user.Id }, user);
             }
             else
@@ -49,11 +55,12 @@ namespace WebApi.Controllers
         }
 
         [HttpPost("LogIn")]
-        public ActionResult<User> Post([FromBody] LogInUser logInUser)
+        public async Task<ActionResult<User>> Post([FromBody] LogInUser logInUser)
         {
-            var user = _usersService.GetUser(logInUser);
+            var user = await _usersService.GetUser(logInUser);
             if(user == null)
-                return NotFound();
+                return NoContent();
+            _logger.LogInformation($"--Login attemped User, with email {logInUser.Email}--");
             return Ok(user);
         }
 
@@ -64,6 +71,7 @@ namespace WebApi.Controllers
             if (_passwordService.GetStrongPassword(updateUserDetails.Password).Score >2)
             {
                 await _usersService.UpdateUser(id, updateUserDetails);
+                _logger.LogInformation($"--Update attemped User, with email {updateUserDetails.Email}, with name {updateUserDetails.FirstName} {updateUserDetails.LastName}--");
                 return Ok();
             }
             else

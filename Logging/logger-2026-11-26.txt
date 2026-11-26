@@ -1,0 +1,7 @@
+2026-11-26 17:02:05.9059|INFO|WebApi.Controllers.UsersController|--Login attemped User, with email ruti7191231@gmail.com--
+2026-11-26 17:03:20.0446|INFO|WebApi.Controllers.UsersController|--Update attemped User, with email ruti7191231@gmail.com, with name Ruti Gamliel--
+2026-11-26 17:21:12.7880|INFO|WebApi.Controllers.UsersController|--Login attemped User, with email ruti7191231@gmail.com--
+2026-11-26 17:36:28.7985|INFO|WebApi.Controllers.UsersController|--Added User number 2, with email Dasi7937@gmail.com, with name Dasi Gamliel--
+2026-11-26 17:37:19.8553|INFO|WebApi.Controllers.UsersController|--Added User number 3, with email Dasi7937@gmail.com, with name Dasi Gamliel--
+2026-11-26 17:38:53.5476|INFO|WebApi.Controllers.UsersController|--Added User number 4, with email Dasi7937@gmail.com, with name Dasi Gamliel--
+2026-11-26 18:36:26.5297|INFO|WebApi|
